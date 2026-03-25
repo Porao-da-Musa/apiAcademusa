@@ -4,7 +4,7 @@ Feito com FastAPI
 
 ## Setup
 
-\```bash
+```bash
 # Clone o repo
 git clone https://github.com/Porao-da-Musa/apiAcademusa.git
 cd apiAcademusa
@@ -21,4 +21,4 @@ cp .env.example .env
 
 # Rode a API
 uvicorn main:app --reload
-\```
+```
