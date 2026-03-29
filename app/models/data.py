@@ -1,0 +1,136 @@
+USERS = [
+    {
+        "id": "user-1",
+        "name": "Teste",
+        "email": "teste@teste.com",
+        "password": "123456",
+    }
+]
+
+EXERCISES = [
+    {
+        "id": "1",
+        "name": "Supino com Barra",
+        "category": "Peito",
+        "equipment": "Barra",
+        "level": "Intermediario",
+        "muscles": ["Peito", "Triceps", "Ombros"],
+    },
+    {
+        "id": "2",
+        "name": "Agachamento Livre",
+        "category": "Pernas",
+        "equipment": "Rack de Agachamento",
+        "level": "Intermediario",
+        "muscles": ["Quadriceps", "Gluteos", "Posteriores"],
+    },
+    {
+        "id": "3",
+        "name": "Levantamento Terra",
+        "category": "Costas",
+        "equipment": "Barra",
+        "level": "Avancado",
+        "muscles": ["Costas", "Posteriores", "Gluteos"],
+    },
+    {
+        "id": "4",
+        "name": "Barra Fixa",
+        "category": "Costas",
+        "equipment": "Barra Fixa",
+        "level": "Intermediario",
+        "muscles": ["Dorsais", "Biceps", "Costas"],
+    },
+    {
+        "id": "5",
+        "name": "Desenvolvimento",
+        "category": "Ombros",
+        "equipment": "Barra",
+        "level": "Intermediario",
+        "muscles": ["Ombros", "Triceps"],
+    },
+    {
+        "id": "6",
+        "name": "Leg Press",
+        "category": "Pernas",
+        "equipment": "Leg Press",
+        "level": "Iniciante",
+        "muscles": ["Quadriceps", "Gluteos", "Posteriores"],
+    },
+    {
+        "id": "7",
+        "name": "Crucifixo no Cross",
+        "category": "Peito",
+        "equipment": "Cross",
+        "level": "Iniciante",
+        "muscles": ["Peito"],
+    },
+    {
+        "id": "8",
+        "name": "Puxada Alta",
+        "category": "Costas",
+        "equipment": "Cross",
+        "level": "Iniciante",
+        "muscles": ["Dorsais", "Biceps"],
+    },
+    {
+        "id": "9",
+        "name": "Rosca Direta",
+        "category": "Bracos",
+        "equipment": "Halteres",
+        "level": "Iniciante",
+        "muscles": ["Biceps"],
+    },
+    {
+        "id": "10",
+        "name": "Triceps na Polia",
+        "category": "Bracos",
+        "equipment": "Cross",
+        "level": "Iniciante",
+        "muscles": ["Triceps"],
+    },
+]
+
+WORKOUTS_BY_USER = {
+    "user-1": [
+        {
+            "id": "1",
+            "order": 1,
+            "name": "Supino Reto",
+            "equipment": "Barra",
+            "status": "Ocupado",
+            "sets": 4,
+            "reps": 10,
+            "alternatives": ["Halteres", "Maquina Chest Press", "Barra"],
+        },
+        {
+            "id": "2",
+            "order": 2,
+            "name": "Leg Inclinado",
+            "equipment": "Maquina",
+            "status": "Disponivel",
+            "sets": 3,
+            "reps": 12,
+            "alternatives": [],
+        },
+        {
+            "id": "3",
+            "order": 3,
+            "name": "Puxada Frontal",
+            "equipment": "Polia",
+            "status": "Disponivel",
+            "sets": 3,
+            "reps": 10,
+            "alternatives": [],
+        },
+        {
+            "id": "4",
+            "order": 4,
+            "name": "Supino Inclinado",
+            "equipment": "Halteres",
+            "status": "Disponivel",
+            "sets": 3,
+            "reps": 10,
+            "alternatives": [],
+        },
+    ]
+}
