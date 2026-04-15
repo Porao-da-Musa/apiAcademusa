@@ -1,47 +1,42 @@
 # Academusa API
 
-Feito com FastAPI
+API FastAPI para receber e processar JSON do YOLO.
 
-## Setup
+## Como rodar
 
 ```bash
-# Clone o repo
-git clone https://github.com/Porao-da-Musa/apiAcademusa.git
-cd apiAcademusa
-
-# Crie o venv
-python -m venv venv
-venv\Scripts\activate
-
-# Dependências
 pip install -r requirements.txt
-
-# Variáveis de ambiente
-cp .env.example .env
-
-# Rode a API
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
-## Rotas principais
+## Endpoint principal
 
-- `GET /health`
-- `POST /api/auth/signup`
-- `POST /api/auth/login`
-- `GET /api/auth/users/{user_id}`
-- `GET /api/dashboard/{user_id}`
-- `GET /api/exercises`
-- `GET /api/exercises?category=Peito`
-- `GET /api/exercises?level=Iniciante`
-- `GET /api/workouts/{user_id}`
-- `POST /api/workouts/{user_id}/exercises`
-- `DELETE /api/workouts/{user_id}/exercises/{exercise_id}`
+- `POST /api/v1/yolo/detections/process`
 
-## Usuario inicial
+## Exemplo de payload
 
-- `teste@teste.com`
-- `123456`
+```json
+{
+  "frame_id": 123,
+  "detections": [
+    {
+      "class": "person",
+      "confidence": 0.98,
+      "bbox": [120, 80, 60, 180]
+    }
+  ]
+}
+```
+
+## O que a API faz
+
+- valida a estrutura do JSON
+- filtra deteccoes abaixo do limite configurado
+- normaliza as bounding boxes
+- retorna um resumo estruturado do frame
 
 ## Observacoes
 
-- Os dados estão em memoria.
+- sem banco de dados
+- sem autenticacao
+- preparada para futura integracao com Supabase
