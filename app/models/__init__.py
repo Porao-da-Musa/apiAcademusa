@@ -1,1 +1,1 @@
-from app.models.data import EXERCISES, USERS, WORKOUTS_BY_USER
+"""# placeholder para futuros modelos de banco"""
